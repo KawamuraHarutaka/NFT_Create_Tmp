@@ -15,7 +15,8 @@ const Home: NextPage = () => {
     'function totalSupply() public view virtual override returns (uint256)',
     "function mint(uint _mintAmount) public payable",
   ]
-  const contractAddress = "0x9ee6c48d1984fA92dE6c0339741f384E62Ea114a"
+  // const contractAddress = "0x9ee6c48d1984fA92dE6c0339741f384E62Ea114a"
+  const contractAddress = "0x0B2B4De66b7EF073bD0c68E1fba5b24b8214e1b4"
   useEffect(() => {
     const setSaleInfo = async() =>{
       const provider = await new ethers.providers.Web3Provider((window as any).ethereum);
@@ -59,7 +60,8 @@ const Home: NextPage = () => {
               symbol: 'ETH',
               decimals: 5,
             },
-            rpcUrls: ['https://goerli.infura.io/v3/20cd5bade2c0407da65c6811cc2a1b37'],
+            // rpcUrls: ['https://goerli.infura.io/v3/20cd5bade2c0407da65c6811cc2a1b37'],
+            rpcUrls: ['https://goerli.infura.io/v3/9825a6abd47e4f789f8fb99553421948'],
           }],
         });
         console.log('try');
@@ -104,12 +106,14 @@ const Home: NextPage = () => {
       }
     };
     return <>
-    <div className="bg-black pb-16 flex flex-wrap buttom justify-center">
+    {/* <div className="bg-black pb-16 flex flex-wrap buttom justify-center"> */}
+    <div className="bg-cyan-500 pb-16 flex flex-wrap buttom justify-center">
       <div className='px-8 pt-8 lg:px-28 lg:py-28'>
-        <Image className="min-w-full" src="/main_grap.png" alt="Main Image" width={500} height={500}/>
+        {/* <Image className="min-w-full" src="/main_grap.png" alt="Main Image" width={500} height={500}/> */}
+        <Image className="min-w-full" src="/20.png" alt="Main Image" width={500} height={500}/>
       </div>
       <div className="m-12 lg:m-32 px-12 py-6 lg:pt-8 lg:px-20 border-2 bg-black text-center border-[#FFFFFF] bg-center bg-contain bg-no-repeat">
-        <h1 className="text-2xl lg:text-4xl pt-2 lg:pt-4 lg:pb-6 text-white font-['Impact']">ETH MASKS NFT</h1>
+        <h1 className="text-2xl lg:text-4xl pt-2 lg:pt-4 lg:pb-6 text-white font-['Impact']">ETH NFT</h1>
         <h1 className="text-2xl lg:text-4xl pt-2 lg:pt-4 lg:pb-6 text-white font-['Impact']"> {mintNum} / 5000</h1>
         <a className="text-2xl lg:text-4xl pt-2 lg:pt-8 lg:pb-8 text-white font-['Impact']">3</a><a className="text-2xl lg:text-3xl pt-2 lg:pt-8 lg:pb-8 text-[#99CDDB] font-['Impact'] ">MAX</a><br/>
         
